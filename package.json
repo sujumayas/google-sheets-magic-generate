@@ -1,0 +1,22 @@
+{
+  "name": "google-sheets-magic-generate",
+  "version": "1.0.0",
+  "description": "Just a Google Sheets to Magic Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sujumayas/google-sheets-magic-generate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sujumayas/google-sheets-magic-generate/issues"
+  },
+  "homepage": "https://github.com/sujumayas/google-sheets-magic-generate#readme",
+  "dependencies": {
+    "googleapis": "^39.2.0"
+  }
+}
