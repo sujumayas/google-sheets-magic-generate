@@ -22,17 +22,24 @@ const Temu = {
       if(!args[0]){
         return {
           title: `${data['help']['help']['name']}`, 
-          description: `${data['help']['help']['description']}${data['help']['help']['help']}`
+          description: `${data['help']['help']['description']}`,
+          fields: {name: "Content: ", value: `${data['help']['help']['help']}`}
         }
       }else{
         return {
           title: `${data['help'][args[0]]['name']}`, 
-          description: `${data['help'][args[0]]['description']}${data['help'][args[0]]['help']}`
+          description: `${data['help'][args[0]]['description']}`,
+          fields: {name: "Content: ", value: `${data['help'][args[0]]['help']}`}
         }
       }
     },
     'joke': (data, args) => {
-      return {title: "Just", description: "kiddin"}
+      let joke = Math.floor(Math.random() * data["jokes"].length)
+      console.log(data["jokes"][joke])
+      return {title: "Joke command:", description: "...", fields:{
+        name: data["jokes"][joke].name,
+        value: data["jokes"][joke].description
+      }}
     }
   },
 
