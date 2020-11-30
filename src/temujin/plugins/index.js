@@ -1,7 +1,7 @@
-const {show} = require("./show.js")
+const {search} = require("./search.js")
 
 plugins = [
-  show, 
+  search, 
 ]
 
 module.exports = plugins

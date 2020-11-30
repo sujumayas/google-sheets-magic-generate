@@ -1,5 +1,5 @@
 require('dotenv').config()
-const { client, createTemplate } = require("./temujin/services/discord.js")
+const { client } = require("./temujin/services/discord.js")
 const { Temu } = require("./temujin/temu.js")
 const plugins = require("./temujin/plugins/index")
 const PREFIX = "/"
@@ -21,8 +21,8 @@ client.on("message", async (message)=>{
       .substring(PREFIX.length)
       .split(/\s+/)
     if( botName == "temu" ){
-      const response = await createTemplate( await Temu.execute(cmdName, args)) // temu.execute should return Embed Object -.-
-      message.channel.send(response)
+      const response = await Temu.execute(cmdName, args) // temu.execute should return Embed Object -.-
+      message.channel.send({ embed: response })
     }
   }  
     
