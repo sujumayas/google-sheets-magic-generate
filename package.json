@@ -4,9 +4,9 @@
   "description": "Just a Google Sheets to Magic Generator",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", 
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/bot.js",
-    "dev": "nodemon ./src/bot.js"
+    "dev": "nodemon ./src/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/sujumayas/google-sheets-magic-generate#readme",
   "dependencies": {
+    "axios": "^0.21.0",
     "discord.js": "^12.5.0",
     "dotenv": "^8.2.0",
     "googleapis": "^39.2.0"
