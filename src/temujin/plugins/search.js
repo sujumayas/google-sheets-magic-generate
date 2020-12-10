@@ -3,7 +3,7 @@ const axios = require('axios');
 const search = {
   
   name : 'search',
-  exec: async function(data, args){
+  exec: async function(data, user, args){
     apiBaseURL = "https://public-api.wordpress.com/rest/v1.1/sites/theworldofnoth.wordpress.com"
     let response = await axios.get(`${apiBaseURL}/posts?search=${args[1]}&category=${args[0]}`) //args.join("&amp;")
     console.log(response.data)

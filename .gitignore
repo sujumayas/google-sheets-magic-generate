@@ -1,5 +1,7 @@
 node_modules
 node_modules/*
 token.json
+"token.json"
+"\"token.json\""
 credentials.json
 .env

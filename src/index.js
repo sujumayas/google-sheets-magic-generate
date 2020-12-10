@@ -21,7 +21,9 @@ client.on("message", async (message)=>{
       .substring(PREFIX.length)
       .split(/\s+/)
     if( botName == "temu" ){
-      const response = await Temu.execute(cmdName, args) // temu.execute should return Embed Object -.-
+      let user = message.member.nickname.split(" ")[0]
+      console.log(user)
+      const response = await Temu.execute(cmdName, user, args) // temu.execute should return Embed Object -.-
       message.channel.send({ embed: response })
     }
   }  
