@@ -1,7 +1,7 @@
 const fs = require('fs');
 const readline = require('readline');
 const {google} = require('googleapis');
-let spellsData ={};
+let castersGoogleData ={};
 // If modifying these scopes, delete token.json.
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
 // The file token.json stores the user's access and refresh tokens, and is
@@ -77,14 +77,14 @@ async function listSpells(auth) {
   let sheets = google.sheets({version: 'v4', auth});
   const spellsConfig = {
     spreadsheetId: '1a3awLuoagL6xFbxfIpPcthljKSDoVvOnzDxlo7nVFF8',
-    range: 'SpellsData!A1:E3',
+    range: 'SpellsData!A1:L3',
   }
   const manaConfig = {
     spreadsheetId: '1a3awLuoagL6xFbxfIpPcthljKSDoVvOnzDxlo7nVFF8',
     range: 'ManaData!A1:C3',
   }
-  spellsData["spells"] = (await sheets.spreadsheets.values.get(spellsConfig)).data
-  spellsData["mana"] = (await sheets.spreadsheets.values.get(manaConfig)).data
+  castersGoogleData["spells"] = (await sheets.spreadsheets.values.get(spellsConfig)).data
+  castersGoogleData["mana"] = (await sheets.spreadsheets.values.get(manaConfig)).data
 
   
 
@@ -106,4 +106,4 @@ async function listSpells(auth) {
   // });
 }
 
-module.exports = { spellsData }
+module.exports = { castersGoogleData }

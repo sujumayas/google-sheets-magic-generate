@@ -2,7 +2,7 @@ require('dotenv').config()
 const { client } = require("./temujin/services/discord.js")
 const { Temu } = require("./temujin/temu.js")
 const plugins = require("./temujin/plugins/index")
-const PREFIX = "/"
+const PREFIX = "+"
 
 
 // 1. Login Discord client 
